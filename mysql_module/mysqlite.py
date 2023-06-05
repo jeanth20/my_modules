@@ -57,14 +57,15 @@ class SQLiteDB:
 
 
 # Example usage:
-database_name = "example.db"
+database_name = "University.db"
 table_name = "students"
 num_entries = 10
 
 db = SQLiteDB(database_name)
 db.connect()
 db.create_random_data(table_name, num_entries)
-db.disconnect()
+# remember to close db conn
+# db.disconnect()
 
 all_data = db.get_all_data(table_name)
 print("All data:")
